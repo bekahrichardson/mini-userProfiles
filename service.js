@@ -1,4 +1,10 @@
 angular.module('userProfiles').service('mainService', function() {
+  $scope.getUsers = function() {
+      $scope.users = mainService.getUsers();
+  }
+  $scope.getUsers();
+  $scope.toggleFavorite = mainService.toggleFavorite;
+})
   var data =
   [
     {
@@ -21,3 +27,6 @@ angular.module('userProfiles').service('mainService', function() {
     }
   ]
 });
+
+// Write a function in your service called "getUsers" that will return all of our user data to the controller.
+//Remember: functions made in a service can be tied to the service object via the "this" keyword.
