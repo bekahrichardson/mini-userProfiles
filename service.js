@@ -18,9 +18,15 @@ angular.module('userProfiles').service('mainService', function() {
         "first_name": "oscar",
         "last_name": "bluth",
         "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"
-    }
-  ]
-});
+    }];
+  this.getUsers = function(){
+        return data;
+  }
+
+  this.toggleFavorite = function(userIndex){
+    data[userIndex].isFavorite = !data[userIndex].isFavorite;
+  }
+})
 
 // Write a function in your service called "getUsers" that will return all of our user data to the controller.
 //Remember: functions made in a service can be tied to the service object via the "this" keyword.
