@@ -1,11 +1,10 @@
 angular.module('userProfiles').service('mainService', function() {
-  var data =
-  [
-    {
+  var data = [{
         "id": 0,
         "first_name": "george",
         "last_name": "bluth",
-        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg",
+        "isFavorite": true
     },
     {
         "id": 1,
@@ -19,6 +18,7 @@ angular.module('userProfiles').service('mainService', function() {
         "last_name": "bluth",
         "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"
     }];
+
   this.getUsers = function(){
         return data;
   }
@@ -27,6 +27,3 @@ angular.module('userProfiles').service('mainService', function() {
     data[userIndex].isFavorite = !data[userIndex].isFavorite;
   }
 })
-
-// Write a function in your service called "getUsers" that will return all of our user data to the controller.
-//Remember: functions made in a service can be tied to the service object via the "this" keyword.
