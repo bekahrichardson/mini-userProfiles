@@ -1,10 +1,4 @@
 angular.module('userProfiles').service('mainService', function() {
-  $scope.getUsers = function() {
-      $scope.users = mainService.getUsers();
-  }
-  $scope.getUsers();
-  $scope.toggleFavorite = mainService.toggleFavorite;
-})
   var data =
   [
     {
